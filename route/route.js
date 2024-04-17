@@ -17,7 +17,7 @@ router.put("/storeItem/delete/:storeId", StoreController.storeDeleteController);
 router.get("/cart/:userId", CartController.getCartItemController);
 router.put("/cart/add", CartController.getCartItemAndAddController);
 //all other endpoints
-router.all("/", (req, res) => {
+router.all("*", (req, res) => {
   "failed";
 });
 module.exports = router;

@@ -18,6 +18,8 @@ router.get("/cart/:userId", CartController.getCartItemController);
 router.put("/cart/add", CartController.getCartItemAndAddController);
 //all other endpoints
 router.all("*", (req, res) => {
-  "failed";
+  res.status(500).json({
+    message: "failure",
+  });
 });
 module.exports = router;
